@@ -10,6 +10,12 @@
       "matchPackageNames": ["jenkins"],
       "matchDatasources": ["docker"],
       "sourceUrl": "https://jenkins.io/changelog-stable"
+    },
+    {
+      "matchPackageNames": ["jenkins/jenkins"],
+      "matchDatasources": ["docker"],
+      "sourceUrl": "https://jenkins.io/changelog-stable"
     }
+
   ]
 }
