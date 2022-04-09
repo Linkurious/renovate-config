@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["(^|\\/)traefik$"],
+      "matchDatasources": ["docker"],
+      "sourceUrl": "https://github.com/containous/traefik"
+    },
+    {
+      "matchPackageNames": ["jenkins"],
+      "matchDatasources": ["docker"],
+      "sourceUrl": "https://jenkins.io/changelog-stable"
+    }
+  ]
+}
