@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "baseBranches": ["develop-stable"],
+  "labels": ["dependencies"],
+  "prConcurrentLimit": 2,
+  "respectLatest": false,
+  "ignoreUnstable": false,
+  "schedule": "every weekend",
+  "vulnerabilityAlerts": {
+    "labels": ["type:security"]
+  },
+  "npmrc": "registry=https://nexus3.linkurious.net/repository/npm/",
+  "hostRules": [
+    {
+      "hostType": "npm",
+      "matchHost": "https://nexus3.linkurious.net/repository/npm/",
+      "encrypted": {
+        "token": "wcFMA/xDdHCJBTolAQ//fgV/GnddLBTYkIPue74wSXeWfiY8OlxJ8aXtxIsU6elYnDKp5XJovQe3GaSY7zCQ7qXFFGSuaFiMs3OYC80npDvMgj+Sur0uHwfwb7eEmjzTqyLBDauDs+66b6eOEMe9GYyFlWg897yh2gYYEJeeToGKgqD9DrMuWSdVzCJaxl96sM8M6zO4fQh6oH+c9AYlEx6BoXlN+9E0MlTsdMO5DknyeaUHkeMLfh2prhB7q8zGlChytjSKrGGAe9OR9/oV2P79zDjq/wUz9TVacsxRQ5fuF5AX1/LWz4etRyHzC9yePjJ/3e6LKSOHbr3uyhQOB0Y5h70ffJe1hWks5tbJB0ZAG+8R3xm5syPQqtKJV7RG+d9QCKahj2TPJP4munX4Sj6oixzzCG+TCyrhMrL8zLztwOIGc3VwaNrOeUrX12DCNT8Tuu4BdzGmOAQSltikQW6lHnWCA7tK+KsjAF6ieOnygmm6ldoELFmDKC1cwAkcXjOwyfoYwPw0YJkZgVzBEt3G3PDSUrJic9eQUEE3il0E/e2uqK03Qud8ZWXyavUfZTwm6B5ILIAndf8EIPO7Z5xpEBi6RfMHc1fx0CZuDM8E0d/FLmSSs1ljiE7c6xEFy+45VSd/81e0UM+ZSDU4TTG7d3n+cbKOzPWrUNASx5jyy2doEdZWInONuUAsu3XSiQFSApHbo8v+YHvnMv1/dKr9IokQJ5GnPpMCQX8vhSyQXlHM0005HjqqMdSPN9+rldrcGBrpyg4ZIxA6VYusR1lw2v+l/S0QlGir1unh85ApunlB4nCsMroMMNzmfLu0uHiT0rUbb0mAw3q3ISmxDCbh96e/gCyr0zAsReU9TuCjmR7J6SYij+mn"
+      },
+      "authType": "Basic"
+    }
+  ]
+}
