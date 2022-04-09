@@ -14,7 +14,7 @@
     {
       "matchPackageNames": ["jenkins/jenkins"],
       "matchDatasources": ["docker"],
-      "sourceUrl": "https://jenkins.io/changelog-stable"
+      "sourceUrl": "https://jenkins.io/changelog"
     }
 
   ]
