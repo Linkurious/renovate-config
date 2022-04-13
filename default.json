@@ -14,7 +14,8 @@
   "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "addLabels": ["docker"]
+      "addLabels": ["docker"],
+      "labels": ["docker"]
     }
   ],
   "vulnerabilityAlerts": {
