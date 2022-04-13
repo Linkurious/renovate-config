@@ -11,6 +11,12 @@
   "docker": {
     "addLabels": ["docker"]
   },
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "addLabels": ["docker"]
+    }
+  ],
   "vulnerabilityAlerts": {
     "labels": ["type:security"]
   },
