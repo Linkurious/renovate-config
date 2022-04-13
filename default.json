@@ -8,6 +8,9 @@
   "respectLatest": false,
   "ignoreUnstable": false,
   "schedule": "every weekend",
+  "docker": {
+    "addLabels": ["docker"]
+  },
   "vulnerabilityAlerts": {
     "labels": ["type:security"]
   },
