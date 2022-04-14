@@ -3,7 +3,7 @@
     "config:base"
   ],
   "baseBranches": ["develop-stable"],
-  "addLabels": ["dependencies"],
+  "labels": ["dependencies"],
   "prConcurrentLimit": 2,
   "respectLatest": false,
   "ignoreUnstable": false,
