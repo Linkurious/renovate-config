@@ -14,8 +14,13 @@
   "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "addLabels": ["docker"],
-      "labels": ["docker"]
+      "addLabels": ["docker"]
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["npm", "node"],
+      "addLabels": ["javascript"]
     }
   ],
   "vulnerabilityAlerts": {
