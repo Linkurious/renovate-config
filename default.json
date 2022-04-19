@@ -5,8 +5,8 @@
   "baseBranches": ["develop-stable"],
   "labels": ["dependencies"],
   "prConcurrentLimit": 2,
-  "respectLatest": false,
-  "ignoreUnstable": false,
+  "respectLatest": true,
+  "ignoreUnstable": true,
   "schedule": "every weekend",
   "docker": {
     "addLabels": ["docker"]
