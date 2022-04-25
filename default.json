@@ -30,7 +30,7 @@
     }
   ],
   "vulnerabilityAlerts": {
-    "labels": ["type:security"]
+    "addLabels": ["type:security"]
   },
   "npmrc": "registry=https://nexus3.linkurious.net/repository/npm/",
   "hostRules": [
