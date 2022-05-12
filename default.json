@@ -25,7 +25,6 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": ["npm", "node"],
       "matchUpdateTypes": ["major"],
       "matchBaseBranches": ["develop-stable"],
       "enabled": false
