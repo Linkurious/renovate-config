@@ -15,8 +15,7 @@
   "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "addLabels": ["docker"],
-      "versioning": "semver"
+      "addLabels": ["docker"]
     },
     {
       "matchDatasources": ["npm", "node"],
