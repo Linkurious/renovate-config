@@ -26,11 +26,6 @@
       "matchUpdateTypes": ["major"],
       "matchBaseBranches": ["develop-maintenance", "develop-stable"],
       "enabled": false
-    },
-    {
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["node"],
-      "versioning": "node"
     }
   ],
   "vulnerabilityAlerts": {
