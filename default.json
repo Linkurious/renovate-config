@@ -26,6 +26,13 @@
       "matchUpdateTypes": ["major"],
       "matchBaseBranches": ["develop-maintenance", "develop-stable"],
       "enabled": false
+    },
+    {
+      "managers": ["helmv3"],
+      "additionalBranchPrefix": "{{baseDir}}-",
+      "commitMessageSuffix": "{{baseDir}}-",
+      "bumpVersion": "patch",
+      "packagePatterns": [".*"]
     }
   ],
   "vulnerabilityAlerts": {
