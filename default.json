@@ -35,6 +35,10 @@
       "commitMessageSuffix": "{{baseDir}}-",
       "bumpVersion": "patch",
       "packagePatterns": [".*"]
+    },
+    {
+      "matchPackagePatterns": ["curl"],
+      "automerge": true
     }
   ],
   "vulnerabilityAlerts": {
