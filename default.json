@@ -2,7 +2,9 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base",
-    "workarounds:nodeDockerVersioning"
+    "github>Linkurious/renovate-config:meta",
+    "workarounds:nodeDockerVersioning",
+    "regexManagers:dockerfileVersions"
   ],
   "baseBranches": ["develop-maintenance", "develop-stable", "develop"],
   "labels": ["dependencies"],
@@ -18,8 +20,7 @@
   "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "addLabels": ["docker"],
-      "versioning": "docker"
+      "addLabels": ["docker"]
     },
     {
       "matchDatasources": ["npm", "node"],
