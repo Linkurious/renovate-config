@@ -47,24 +47,18 @@
     {
       "hostType": "npm",
       "matchHost": "https://nexus3.linkurious.net/repository/npm/",
-      "encrypted": {
-        "token": "{{ secrets.mend_nexus_ro }}"
-      },
+      "token": "{{ secrets.mend_nexus_ro }}",
       "authType": "Basic"
     },
     {
       "hostType": "helm",
       "matchHost": "https://nexus3.linkurious.net/repository/helm-linkurious",
-      "encrypted": {
-        "token": "{{ secrets.mend_nexus_ro }}"
-      },
+      "token": "{{ secrets.mend_nexus_ro }}",
       "authType": "Basic"
     },
     {
       "matchHost": "https://hub.docker.nexus3.linkurious.net",
-      "encrypted": {
-        "token": "{{ secrets.mend_nexus_ro }}"
-      },
+      "token": "{{ secrets.mend_nexus_ro }}",
       "authType": "Basic"
     }
   ]
