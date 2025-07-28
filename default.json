@@ -42,7 +42,7 @@
   "vulnerabilityAlerts": {
     "addLabels": ["type:security"]
   },
-  "npmrc": "registry=https://nexus3.linkurious.net/repository/npm/",
+  "npmrc": "@linkurious:registry=https://nexus3.linkurious.net/repository/npm/",
   "hostRules": [
     {
       "hostType": "npm",
