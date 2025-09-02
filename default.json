@@ -1,46 +1,67 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
     "github>Linkurious/renovate-config:meta",
     "workarounds:nodeDockerVersioning",
-    "regexManagers:dockerfileVersions"
+    "customManagers:dockerfileVersions"
   ],
-  "baseBranches": ["develop-maintenance", "develop-stable", "develop"],
-  "labels": ["dependencies"],
+  "baseBranchPatterns": [
+    "develop-maintenance",
+    "develop-stable",
+    "develop"
+  ],
+  "labels": [
+    "dependencies"
+  ],
   "branchConcurrentLimit": 10,
   "prConcurrentLimit": 2,
   "prHourlyLimit": 10,
   "respectLatest": true,
   "ignoreUnstable": true,
   "schedule": "every weekend",
-  "docker": {
-    "addLabels": ["docker"]
-  },
   "packageRules": [
     {
-      "matchDatasources": ["docker"],
-      "addLabels": ["docker"]
+      "matchDatasources": ["docker", "node-version"],
+      "matchPackagePatterns": ["node"],
+      "groupName": "node and docker node updates",
+      "groupSlug": "node-docker-updates"
     },
     {
-      "matchDatasources": ["npm", "node"],
-      "addLabels": ["javascript"]
+      "matchDatasources": [
+        "npm",
+        "node-version"
+      ],
+      "addLabels": [
+        "javascript"
+      ]
     },
     {
-      "matchUpdateTypes": ["major"],
-      "matchBaseBranches": ["develop-maintenance", "develop-stable"],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "develop-maintenance",
+        "develop-stable"
+      ],
       "enabled": false
     },
     {
-      "managers": ["helmv3"],
-      "additionalBranchPrefix": "{{baseDir}}-",
-      "commitMessageSuffix": "{{baseDir}}-",
+      "matchManagers": [
+        "helmv3"
+      ],
+      "additionalBranchPrefix": "{{packageFileDir}}-",
+      "commitMessageSuffix": "{{packageFileDir}}-",
       "bumpVersion": "patch",
-      "packagePatterns": [".*"]
+      "matchPackageNames": [
+        "/.*/"
+      ]
     }
   ],
   "vulnerabilityAlerts": {
-    "addLabels": ["type:security"]
+    "addLabels": [
+      "type:security"
+    ]
   },
   "npmrc": "@linkurious:registry=https://nexus3.linkurious.net/repository/npm/",
   "hostRules": [
