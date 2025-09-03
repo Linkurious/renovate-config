@@ -3,7 +3,6 @@
   "extends": [
     "config:recommended",
     "github>Linkurious/renovate-config:meta",
-    "workarounds:nodeDockerVersioning",
     "customManagers:dockerfileVersions"
   ],
   "baseBranchPatterns": [
@@ -22,7 +21,7 @@
   "schedule": "every weekend",
   "packageRules": [
     {
-      "matchDatasources": ["docker", "node-version"],
+      "matchDatasources": ["docker", "node-version", "npm"],
       "matchPackagePatterns": ["node"],
       "groupName": "node and docker node updates",
       "groupSlug": "node-docker-updates"
