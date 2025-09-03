@@ -22,7 +22,7 @@
   "packageRules": [
     {
       "matchDatasources": ["docker", "node-version", "npm"],
-      "matchPackagePatterns": ["/(?:^|/)node$/"],
+      "matchPackageNames": ["/(?:^|/)node$/"],
       "groupName": "node and docker node updates",
       "groupSlug": "node-docker-updates"
     },
