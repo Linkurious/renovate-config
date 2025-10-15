@@ -3,7 +3,8 @@
   "extends": [
     "config:recommended",
     "github>Linkurious/renovate-config:meta",
-    "customManagers:dockerfileVersions"
+    "customManagers:dockerfileVersions",
+    "customManagers:helmChartYamlAppVersions"
   ],
   "baseBranchPatterns": [
     "develop-maintenance",
