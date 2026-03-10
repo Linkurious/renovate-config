@@ -57,6 +57,16 @@
         "/.*/"
       ]
     }
+    ,
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": [
+        "playwright",
+        "@playwright/test"
+      ],
+      "groupName": "Playwright packages",
+      "groupSlug": "playwright"
+    }
   ],
   "vulnerabilityAlerts": {
     "addLabels": [
