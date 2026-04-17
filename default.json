@@ -81,6 +81,11 @@
       "matchHost": "https://hub.docker.nexus3.linkurious.net",
       "token": "{{ secrets.mend_nexus_ro }}",
       "authType": "Basic"
+    },
+    {
+      "matchHost": "https://public-pull.nexus3.linkurious.net",
+      "token": "{{ secrets.mend_nexus_public_pull }}",
+      "authType": "Basic"
     }
   ]
 }
