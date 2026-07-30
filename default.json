@@ -4,7 +4,8 @@
     "config:recommended",
     "github>Linkurious/renovate-config:meta",
     "customManagers:dockerfileVersions",
-    "customManagers:helmChartYamlAppVersions"
+    "customManagers:helmChartYamlAppVersions",
+    "security:minimumReleaseAgeNpm"
   ],
   "baseBranchPatterns": [
     "develop-maintenance",
@@ -21,6 +22,12 @@
   "ignoreUnstable": true,
   "schedule": "every weekend",
   "packageRules": [
+    {
+      "internalChecksFilter": "strict",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@linkurious/**"],
+      "minimumReleaseAge": null
+    },
     {
       "matchDatasources": ["docker", "node-version", "npm"],
       "matchPackageNames": ["/(?:^|/)node$/"],
