@@ -20,8 +20,13 @@
   "respectLatest": true,
   "ignoreUnstable": true,
   "schedule": "every weekend",
-  "minimumReleaseAge": "7 days",
+  "minimumReleaseAge": "0 days",
   "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "excludePackageNames": ["@linkurious/**"],
+      "minimumReleaseAge": "7 days"
+    },
     {
       "matchDatasources": ["docker", "node-version", "npm"],
       "matchPackageNames": ["/(?:^|/)node$/"],
@@ -57,11 +62,6 @@
       "matchPackageNames": [
         "/.*/"
       ]
-    },
-    {
-      "matchDatasources": ["npm"],
-      "matchPackageNames": ["@linkurious/**"],
-      "minimumReleaseAge": "0 days"
     }
   ],
   "vulnerabilityAlerts": {
