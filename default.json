@@ -23,6 +23,12 @@
   "schedule": "every weekend",
   "packageRules": [
     {
+      "matchDatasources": ["deb"],
+      "registryUrls": [
+        "https://deb.debian.org/debian?suite=stable&components=main,contrib,non-free"
+      ]
+    },
+    {
       "internalChecksFilter": "strict",
       "matchDatasources": ["npm"],
       "matchPackageNames": ["@linkurious/**"],
