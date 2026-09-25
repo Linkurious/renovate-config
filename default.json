@@ -27,7 +27,7 @@
       "defaultRegistryUrlTemplate": "https://qa.debian.org/madison.php?package={{packageName}}&table=debian,debian-security&s=trixie,trixie-security&a=amd64,all&text=on",
       "format": "plain",
       "transformTemplates": [
-        "{\"releases\": [releases[$contains(version, \"|\")].{\"version\": $trim($split(version, \"|\")[1])}]}"
+        "{\"releases\": [releases[$contains(version, \"[|]\")].{\"version\": $trim($split(version, \"|\")[1])}]}"
       ]
     }
   },
