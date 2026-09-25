@@ -21,6 +21,16 @@
   "respectLatest": true,
   "ignoreUnstable": true,
   "schedule": "every weekend",
+  "customDatasources": {
+    "debian-trixie": {
+      "description": "Debian trixie main and security archives via Debian QA madison, because the deb datasource cannot read security.debian.org (Packages.xz only)",
+      "defaultRegistryUrlTemplate": "https://qa.debian.org/madison.php?package={{packageName}}&table=debian,debian-security&s=trixie,trixie-security&a=amd64,all&text=on",
+      "format": "plain",
+      "transformTemplates": [
+        "{\"releases\": [releases[$contains(version, "|")].{\"version\": $trim($split(version, "|")[1])}]}"
+      ]
+    }
+  },
   "packageRules": [
     {
       "matchDatasources": ["deb"],
