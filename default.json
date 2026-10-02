@@ -20,6 +20,8 @@
   "prHourlyLimit": 10,
   "respectLatest": true,
   "ignoreUnstable": true,
+  "minimumReleaseAge": "3d",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
   "schedule": "every weekend",
   "packageRules": [
     {
