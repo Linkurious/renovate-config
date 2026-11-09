@@ -39,6 +39,13 @@
       ]
     },
     {
+      "description": "Match the min-release-age=5 enforced by npm",
+      "internalChecksFilter": "strict",
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "minimumReleaseAge": "5 days"
+    },
+    {
       "internalChecksFilter": "strict",
       "matchDatasources": ["npm"],
       "matchPackageNames": ["@linkurious/**"],
